@@ -4,20 +4,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     <bean id="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="Salman"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="50"/>
+        <constructor-arg name="name" value="Salman"></constructor-arg>
+        <constructor-arg index="1"  value="male"></constructor-arg>
+        <constructor-arg type="int"  value="50"></constructor-arg>
     </bean>
-    <bean id="movie1" class="com.stackroute.domain.Movie">
+    <bean id="movie1" class="com.stackroute.domain.Movie" scope="singleton">
         <property name="actor" ref="actor1"/>
     </bean>
 
     <bean id="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Ranveer"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="45"/>
+        <constructor-arg name="name"  value="Ranveer"></constructor-arg>
+        <constructor-arg index="1"  value="male"></constructor-arg>
+        <constructor-arg type="int"  value="50"></constructor-arg>
     </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie">
+    <bean id="movie2" class="com.stackroute.domain.Movie" scope="prototype">
         <property name="actor" ref="actor2"/>
     </bean>
 </beans>
