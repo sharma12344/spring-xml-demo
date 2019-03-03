@@ -8,16 +8,16 @@
         <constructor-arg index="1"  value="male"></constructor-arg>
         <constructor-arg type="int"  value="50"></constructor-arg>
     </bean>
-    <bean id="movie1" class="com.stackroute.domain.Movie" scope="singleton">
-        <property name="actor" ref="actor1"/>
-    </bean>
+    <bean id="movie1" autowire="constructor" class="com.stackroute.domain.Movie"></bean>
+        <!--<property name="actor" ref="actor1"/>-->
+    <!--</bean>-->
 
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name"  value="Ranveer"></constructor-arg>
-        <constructor-arg index="1"  value="male"></constructor-arg>
-        <constructor-arg type="int"  value="50"></constructor-arg>
-    </bean>
-    <bean id="movie2" class="com.stackroute.domain.Movie" scope="prototype">
-        <property name="actor" ref="actor2"/>
-    </bean>
+    <!--<bean id="actor2" class="com.stackroute.domain.Actor">-->
+        <!--<constructor-arg name="name"  value="Ranveer"></constructor-arg>-->
+        <!--<constructor-arg index="1"  value="male"></constructor-arg>-->
+        <!--<constructor-arg type="int"  value="50"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="movie2" class="com.stackroute.domain.Movie" scope="prototype">-->
+        <!--<property name="actor" ref="actor2"/>-->
+    <!--</bean>-->
 </beans>
