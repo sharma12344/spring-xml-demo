@@ -10,6 +10,7 @@
     </bean>
     <bean id="movie1" autowire="constructor" class="com.stackroute.domain.Movie"></bean>-->
     <bean id="beanLifecycleDemoBean"  class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
+    <bean id="BeanPostProcessorDemoBean"  class="com.stackroute.domain.BeanPostProcessorDemoBean" ></bean>
         <!--<property name="actor" ref="actor1"/>-->
     <!--</bean>-->
 
